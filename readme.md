@@ -17,5 +17,5 @@ run_staMeth.sh
 ### 3. Find insertion distribution in pacbio(since pacbio tends to have more insertion in mCG sites, which was exclude for methylation caculation)
 
 # Todo
-## plot methylation in mESC
-## Find insertion sites in longreads with mpileup
+- [ ] plot methylation in mESC
+- [ ] Find insertion sites in longreads with mpileup
