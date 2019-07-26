@@ -26,4 +26,7 @@ run_staMeth.sh
 
 # Todo
 - [ ] plot methylation in mESC
+dir : ~/tapsforcfDNA/20190315/processed/pubData(workstation)
+dir : ~/tapsforcfDNA/20190315/processed/pubBS(workstation)
+
 - [ ] Find insertion sites in longreads with mpileup
