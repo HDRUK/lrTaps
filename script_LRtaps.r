@@ -305,6 +305,10 @@ bamCallMeth <- function(bam_df, sellen, allc, outfix, bq = 13) {
       mC / (mC + uC)
     mCratio <-
       ifelse(length(mCratio) == 0, "0", mCratio) %>% as.character() %>% as.numeric()
+    cov <- length(countalltmp)
+    varratio <- (mC + uC)/cov 
+    varratio <- ifelse(length(varratio) == 0, "1", 1 - varratio) %>% as.character() %>% as.numeric()
+    cxt <- paste(c(paste(countall[,1],countall[,2],sep=":")),collapse="; ")
     mCsta <-
       rbind(mCsta, c(
         gsub("_seq|pos", "", colnames(bam_df_sel)[i]) %>% as.numeric(),
@@ -312,11 +316,14 @@ bamCallMeth <- function(bam_df, sellen, allc, outfix, bq = 13) {
         mC,
         uC,
         fwdmC,
-        revmC
+        revmC,
+        cov,
+        varratio,
+        cxt
       ))
   }
   mCsta <- mCsta %>% as.data.frame()
-  colnames(mCsta) <- c("pos", "mods", "mC", "uC","fwdmC","revmC")
+  colnames(mCsta) <- c("pos", "mods", "mC", "uC","fwdmC","revmC","cov","varratio","cxt")
   write.table(
     mCsta[complete.cases(mCsta), ],
     paste0(outfix, ".CG.meth.xls"),
