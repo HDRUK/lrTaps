@@ -3482,3 +3482,7 @@ The following objects are masked from 'package:base':
     as.Date, as.Date.numeric
 
 There were 50 or more warnings (use warnings() to see the first 50)
+/var/spool/rescomp/compc012/job_scripts/16919189: line 107: syntax error near unexpected token `('
+/var/spool/rescomp/compc012/job_scripts/16919189: line 107: `    samtools view $bc.bam |grep -w -f <(tail -n +2 $bc.read.CG.details.xls |cut -f1 ) |\'
+/var/spool/rescomp/compe020/job_scripts/16919309: line 107: syntax error near unexpected token `('
+/var/spool/rescomp/compe020/job_scripts/16919309: line 107: `    samtools view $bc.bam |grep -w -f <(tail -n +2 $bc.read.CG.details.xls |cut -f1) |\'

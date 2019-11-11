@@ -58,4 +58,18 @@ ln -s /users/ludwig/cfo155/cfo155/ontTaps/data/hbv_run/fastq/fastq-trimmed-barco
 ln -s /users/ludwig/cfo155/cfo155/ontTaps/data/hbv_run/fastq/fastq-trimmed-barcode22-2.3.5.fastq nanopore_rep2.lambda.ccgg.taps.fastq
 ln -s /users/ludwig/cfo155/cfo155/ontTaps/data/hbv_run/fastq/fastq-trimmed-barcode23-2.3.5.fastq nanopore_rep2.lambda.ccgg.no_taps.fastq
 
-
+##### pacbio rep2 #####
+ln -s /users/ludwig/cfo155/cfo155/longReads/rawdata/102019_pacbio/CCS/lbc29/m64002_190920_222134.Q20.fastq pacbio_rep2.mESC_chr11_32180718_32188962.5261.taps.fastq
+ln -s /users/ludwig/cfo155/cfo155/longReads/rawdata/102019_pacbio/CCS/lbc30/m64002_190920_222134.Q20.fastq pacbio_rep2.mESC_chr11_32180718_32188962.5261.no_taps.fastq
+ln -s /users/ludwig/cfo155/cfo155/longReads/rawdata/102019_pacbio/CCS/lbc31/m64002_190920_222134.Q20.fastq pacbio_rep2.mESC_chr13_101122480_101130466.taps.fastq
+ln -s /users/ludwig/cfo155/cfo155/longReads/rawdata/102019_pacbio/CCS/lbc32/m64002_190920_222134.Q20.fastq pacbio_rep2.mESC_chr13_101122480_101130466.no_taps.fastq
+ln -s /users/ludwig/cfo155/cfo155/longReads/rawdata/102019_pacbio/CCS/lbc33/m64002_190920_222134.Q20.fastq pacbio_rep2.hbv_percent_20.taps.fastq
+ln -s /users/ludwig/cfo155/cfo155/longReads/rawdata/102019_pacbio/CCS/lbc34/m64002_190920_222134.Q20.fastq pacbio_rep2.hbv_percent_20.no_taps.fastq
+ln -s /users/ludwig/cfo155/cfo155/longReads/rawdata/102019_pacbio/CCS/lbc35/m64002_190920_222134.Q20.fastq pacbio_rep2.hbv_hep3b.taps.fastq
+ln -s /users/ludwig/cfo155/cfo155/longReads/rawdata/102019_pacbio/CCS/lbc36/m64002_190920_222134.Q20.fastq pacbio_rep2.hbv_hep3b.no_taps.fastq
+ln -s /users/ludwig/cfo155/cfo155/longReads/rawdata/102019_pacbio/CCS/lbc37/m64002_190920_222134.Q20.fastq pacbio_rep2.hbv_huh1.taps.fastq
+ln -s /users/ludwig/cfo155/cfo155/longReads/rawdata/102019_pacbio/CCS/lbc38/m64002_190920_222134.Q20.fastq pacbio_rep2.hbv_huh1.no_taps.fastq
+ln -s /users/ludwig/cfo155/cfo155/longReads/rawdata/102019_pacbio/CCS/lbc39/m64002_190920_222134.Q20.fastq pacbio_rep2.lambda.ccgg.taps.fastq
+ln -s /users/ludwig/cfo155/cfo155/longReads/rawdata/102019_pacbio/CCS/lbc40/m64002_190920_222134.Q20.fastq pacbio_rep2.lambda.ccgg.no_taps.fastq
+ln -s /users/ludwig/cfo155/cfo155/longReads/rawdata/102019_pacbio/CCS/lbc41/m64002_190920_222134.Q20.fastq pacbio_rep2.mESC_chr11_32180718_32188962.4053.taps.fastq
+ln -s /users/ludwig/cfo155/cfo155/longReads/rawdata/102019_pacbio/CCS/lbc42/m64002_190920_222134.Q20.fastq pacbio_rep2.mESC_chr11_32180718_32188962.4053.no_taps.fastq

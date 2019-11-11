@@ -24,5 +24,6 @@ getCGPos(){
 getCGPos resource/4kb.fa
 getCGPos resource/lambda.fa
 getCGPos resource/7513-wtA-Consensus20.fa 
+getCGPos resource/4kb.del_rm.fa
 grep -w chr11 mm9_genome.cg.bed >mm9_genome.cg.chr11.bed
 grep -w chr13 mm9_genome.cg.bed >mm9_genome.cg.chr13.bed
