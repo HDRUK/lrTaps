@@ -12,14 +12,14 @@ run_reference.sh
 ## 2. map reads to reference with minimap2
 run_mapping.sh
 
-## 3.call methylation from bam file 
+## 3. call methylation from bam file 
 
 run_callMeth.sh
 
-$$methylation ratio = \frac{mC}{mC+uC}$$
+$$methylation_ratio = \frac{mC}{mC+uC}$$
 
-mC=CA+GT 
+$$mC = CA + GT$$ 
 
-uC=CG
+$$uC = CG$$
 
 
