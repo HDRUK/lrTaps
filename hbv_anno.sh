@@ -1,2 +1,0 @@
-cut -f1,2 gene_pos.hbv_ncbi.bed |sed 's/\.\./\t/g'|awk 'BEGIN{OFS="\t"}{print "NC_003977.2",$2-1,$2+9,$1"_s\nNC_003977.2",$3-9,$3,$1"_e"}'|awk 'BEGIN{OFS="\t"}{if($3>3182)print $1,$2,"3182",$4;else print $0}'|bedtools getfasta -bed - -fi hbv_genome.ncbi.fasta -name |paste - - >gene_pos.hbv_ncbi.fasta
-cat gene_pos.hbv_ncbi.fasta|while read line ;do fa=`echo -e "$line"|cut -f2`; echo $line `grep -aob $fa <(tail -n +2 7513-wtA-Consensus20.fa|tr -d '\n') ` ;done
