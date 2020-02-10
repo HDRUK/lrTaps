@@ -16,7 +16,7 @@ run_mapping.sh
 
 run_callMeth.sh
 
-$$methylation_ratio = \frac{mC}{mC+uC}$$
+$$methylation\_percentage = \frac{mC}{mC+uC}$$
 
 $$mC = CA + GT$$ 
 
