@@ -4,6 +4,7 @@ options(scipen = 999)
 library(ggplot2)
 library(tidyverse)
 library(dplyr)
+library(reshape2)
 
 ##### on chr11 #####
 files <- list.files(pattern="*.mESC.*chr11.CG.meth.xls")
@@ -82,9 +83,29 @@ for(i in files){
     meth <- rbind(meth, tmp)
 }
 
-selmeth <- meth[(meth$fwdmC+1)/(meth$revmC+1)>0.25 & (meth$fwdmC+1)/(meth$revmC+1)<4 & meth$varratio <0.2, ]
 
+selmeth <- meth[meth$varratio<0.2, ]
 meth.w <- spread(selmeth[,c(1,2,10)],key=smp,value=mods)
+meth.w$nanopore_huh1.vs.notaps <- meth.w$nanopore_rep3.hbv_huh1.taps.CG.meth.xls - meth.w$nanopore_rep3.hbv_huh1.no_taps.CG.meth.xls
+meth.w$pacbio_huh1.vs.notaps <- meth.w$pacbio_rep2.hbv_huh1.taps.CG.meth.xls - meth.w$pacbio_rep2.hbv_huh1.no_taps.CG.meth.xls
+selmeth <- meth.w[,c(1,8,9,12,13,16,17)] %>% melt(id.vars=("pos"))
+selmeth$value[selmeth$value<0] <- 0
+p <- ggplot(selmeth, aes(x = pos, y = value, color = variable)) +
+     geom_bar(stat="identity") +
+     facet_wrap(~variable,ncol=1) +
+     theme_minimal() +
+     ylab("meth") +
+     ylim(0,1)+
+     theme(legend.position="none")
+ggsave(
+  paste0("hbv.meth.huh1_all.pdf"),
+  p,
+  width = 15,
+  height = 12 ,
+  dpi = 300
+)
+
+selmeth <- meth[(meth$fwdmC+1)/(meth$revmC+1)>0.25 & (meth$fwdmC+1)/(meth$revmC+1)<4 & meth$varratio <0.2, ]
 p <- ggplot(selmeth, aes(x = pos, y = mods, color = smp)) +
     geom_bar(stat="identity") +
     facet_wrap(~smp,ncol=1) +
@@ -111,7 +132,7 @@ ggsave(
   paste0("hbv.meth.huh1_taps.pdf"),
   p,
   width = 15,
-  height = 3 ,
+  height = 12 ,
   dpi = 300
 )
 ##### lambda #####

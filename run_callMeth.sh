@@ -28,6 +28,7 @@ export PATH
 WORKDIR=/users/ludwig/cfo155/cfo155/longReads
 cd $WORKDIR
 
+
 # Rscript code/script_LRtaps.r -b processed/nanopore_rep1.4kb.ccgg.meth.bam -l 3500 -a resource/4kb.cg.bed
 # Rscript code/script_LRtaps.r -b processed/nanopore_rep1.4kb.nometh.bam -l 3500 -a resource/4kb.cg.bed
 # Rscript code/script_LRtaps.r -b processed/nanopore_rep1.4kb.taps.KU.bam -l 3500 -a resource/4kb.cg.bed
