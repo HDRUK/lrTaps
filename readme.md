@@ -13,9 +13,11 @@ run_reference.sh
 run_mapping.sh
 
 ## 3.call methylation from bam file 
-methylation ratio = \frac{mC}{mC+uC}  
+
 methylation ratio = $\frac{mC}{mC+uC}$
+
 mC=CA+GT 
+
 uC=CG
 
 run_callMeth.sh
