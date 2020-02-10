@@ -1,21 +1,22 @@
 # Introduction
-This method intends to use taps to detect methylation in longreads sequencing.
+A tool developed for analyzing CG methylation from targeted long-read Tet-assisted pyridine borane sequencing (lrTAPS).
 
 # Steps
 
-## summarize all the sequencing run
+## 0. summarize the details of all sequencing run
 run_dataSummarize.sh 
 
-## reference & cg position 
+## 1. prepare reference sequence & cg position 
 run_reference.sh
 
-## map reads to reference with minimap2
+## 2. map reads to reference with minimap2
 run_mapping.sh
 
-## call methylation from bam file 
-> mC/(mC+uC); mC=CA+GT uC=CG
+## 3.call methylation from bam file 
+methylation ratio = \frac{mC}{mC+uC}  
+methylation ratio = $\frac{mC}{mC+uC}$
+mC=CA+GT 
+uC=CG
 
 run_callMeth.sh
 
-## summarize methylation on each sample
-run_staMeth.sh
